@@ -29,5 +29,4 @@ Feel free to fork this repository and submit pull requests. Report issues or sug
 This project is open-source. See the [LICENSE](LICENSE) file for details (if applicable).
 
 ## Acknowledgments
-- Inspired by the design of AnimeSamaDesktop.
 - Built with ❤️ by BlueDev.
