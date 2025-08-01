@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMessage SMS Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-cb" class="menu-cb">
+  <nav class="menu-nav">
+    <a href="#home" class="menu-lien">Home</a>
+    <a href="#about" class="menu-lien">About</a>
+    <a href="#features" class="menu-lien">Features</a>
+    <a href="#download" class="menu-lien">Download</a>
+    <a href="https://github.com" class="menu-lien">GitHub</a>
+  </nav>
+  <label for="menu-cb" class="menu-label">☰</label>
+  <main>
+    <div class="container">
+      <h1 class="font-climate">iMessage SMS Simulator</h1>
+      <form id="message-form">
+        <input type="text" id="conversation-name" placeholder="Conversation Name" value="Mom" />
+        <div class="file-input-wrapper">
+          <input type="file" id="background-video" accept="video/mp4" class="file-input" />
+          <label for="background-video" class="browse-button font-signika">Browse Video 📹</label>
+        </div>
+        <div id="voice-settings">
+          <div class="voice-group">
+            <label id="voice-received-label" class="font-signika">Voice for Received (Mom):</label>
+            <select id="voice-received" class="font-signika">
+              <option value="default">Default Voice</option>
+            </select>
+          </div>
+          <div class="voice-group">
+            <label id="voice-sent-label" class="font-signika">Voice for Sent (You):</label>
+            <select id="voice-sent" class="font-signika">
+              <option value="default">Default Voice</option>
+            </select>
+          </div>
+        </div>
+        <div id="messages">
+          <div class="message-input">
+            <input type="text" placeholder="Enter Message" class="font-signika" />
+            <select class="message-type font-signika">
+              <option value="received">Received</option>
+              <option value="sent">Sent</option>
+            </select>
+            <button type="button" class="remove-message font-signika">Remove</button>
+          </div>
+        </div>
+        <button type="button" id="add-message" class="font-signika">Add Message</button>
+        <button type="submit" class="font-signika">Generate Simulation</button>
+      </form>
+      <div id="preview">
+        <video id="background-video-player" muted></video>
+        <div id="message-overlay" class="ios-screen">
+          <div class="conversation-header">
+            <div class="avatar"></div>
+            <span id="conv-name" class="font-signika">Mom</span>
+          </div>
+          <div id="message-container" class="message-container"></div>
+        </div>
+      </div>
+    </div>
+    <section id="about" class="news-content">
+      <h3 class="font-climate">About</h3>
+      <p class="font-signika">The iMessage SMS Simulator is an Electron-inspired web application that brings iMessage-style conversations to your browser. It offers ad-free streaming with customizable voice narration, allowing you to watch your simulated chats with a lightweight and user-friendly interface. Learn more on our <a href="https://github.com" class="social-link">GitHub</a>.</p>
+    </section>
+    <section id="features" class="news-content">
+      <h3 class="font-climate">Features</h3>
+      <ul class="font-signika">
+        <li><strong>Ad-Free Simulation:</strong> Generate message sequences with a background video without interruptions.</li>
+        <li><strong>Customizable Voices:</strong> Choose from available system voices for received and sent messages.</li>
+        <li><strong>Dynamic Avatar:</strong> Automatically generates an avatar based on the conversation name.</li>
+        <li><strong>Responsive Design:</strong> Works seamlessly on both desktop and mobile devices.</li>
+        <li><strong>Easy to Use:</strong> Simple interface to add messages, select videos, and generate simulations.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p class="font-signika">Developed with ❤️ by BlueDev</p>
+      <a href="#docs" class="social-link font-signika">Documentation</a> | 
+      <a href="#issues" class="social-link font-signika">Report an Issue</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
